@@ -8,6 +8,18 @@ void afisareTablou(int arr[], int dimensiune) {
     }
     printf("\n");
 }
+\
+void bubbleSort(int arr[], int dimensiune) {
+    for (int i = 0; i < dimensiune - 1; i++) {
+        for (int j = 0; j < dimensiune - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
 
 int main()
 {
@@ -26,5 +38,9 @@ int main()
 
 
     printf("Tablou initial: ");
+    afisareTablou(arr, N);
+
+     bubbleSort(arr, N);
+    printf("Tablou sortat prin Bubblesort: ");
     afisareTablou(arr, N);
 }
