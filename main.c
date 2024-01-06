@@ -34,6 +34,33 @@ void shellSort(int arr[], int dimensiune) {
     }
 }
 
+void quickSort(int arr[], int stanga, int dreapta) {
+    if (stanga < dreapta) {
+        int pivot = arr[dreapta];
+        int i = stanga - 1;
+
+        for (int j = stanga; j <= dreapta - 1; j++) {
+            if (arr[j] < pivot) {
+                i++;
+               
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+
+        
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[dreapta];
+        arr[dreapta] = temp;
+
+        int pi = i + 1;
+
+        
+        quickSort(arr, stanga, pi - 1);
+        quickSort(arr, pi + 1, dreapta);
+    }
+}
 int main()
 {
     int N;
@@ -69,4 +96,14 @@ int main()
     for (int i = 0; i < N; i++) {
         arr[i] = arrCopy[i];
     }
+    
+     quickSort(arr, 0, N - 1);
+    printf("Tablou sortat prin Quicksort: ");
+    afisareTablou(arr, N);
+
+    
+    free(arr);
+    free(arrCopy);
+
+    return 0;
 }
