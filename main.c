@@ -43,4 +43,8 @@ int main()
      bubbleSort(arr, N);
     printf("Tablou sortat prin Bubblesort: ");
     afisareTablou(arr, N);
+
+     for (int i = 0; i < N; i++) { //resetare pt urmatoarele sortari 
+        arr[i] = arrCopy[i];
+    }
 }
