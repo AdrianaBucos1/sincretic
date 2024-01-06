@@ -21,6 +21,19 @@ void bubbleSort(int arr[], int dimensiune) {
     }
 }
 
+void shellSort(int arr[], int dimensiune) {
+    for (int pas = dimensiune / 2; pas > 0; pas /= 2) {
+        for (int i = pas; i < dimensiune; i++) {
+            int temp = arr[i];
+            int j;
+            for (j = i; j >= pas && arr[j - pas] > temp; j -= pas) {
+                arr[j] = arr[j - pas];
+            }
+            arr[j] = temp;
+        }
+    }
+}
+
 int main()
 {
     int N;
@@ -45,6 +58,15 @@ int main()
     afisareTablou(arr, N);
 
      for (int i = 0; i < N; i++) { //resetare pt urmatoarele sortari 
+        arr[i] = arrCopy[i];
+    }
+
+    shellSort(arr, N);
+    printf("Tablou sortat prin Shellsort: ");
+    afisareTablou(arr, N);
+
+   
+    for (int i = 0; i < N; i++) {
         arr[i] = arrCopy[i];
     }
 }
