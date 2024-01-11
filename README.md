@@ -1,6 +1,5 @@
 # sincretic
-
-      Motivul pentru care am ales această tema a fost din dorința de a învața mai mult despre modul de funcționare a algoritmilor de sortare. Am implementat cele 3 modalități de sortare pentru a vedea cum funcționează fiecare și să înțeleg avantajele și dezavantajele lor. Implementarea practică a acestora oferă o perspectivă concretă asupra pașilor implicați în sortare.
+Motivul pentru care am ales această tema a fost din dorința de a învața mai mult despre modul de funcționare a algoritmilor de sortare. Am implementat cele 3 modalități de sortare pentru a vedea cum funcționează fiecare și să înțeleg avantajele și dezavantajele lor. Implementarea practică a acestora oferă o perspectivă concretă asupra pașilor implicați în sortare.
      Scopul proiectului este să analizeze și să compare trei algoritmi de sortare (Bubblesort, Shellsort și Quicksort) si sa masoare timpul de executie pentru fiecare algoritm.
 Detaliile de implementare ale proiectului:
 1.Bubblesort:
